@@ -1,7 +1,7 @@
 function add(nums) {
   let result = 0;
   let arr = [];
-  arr = nums.split(",");
+  arr = nums.split(/\n|,/);
   for (let i = 0; i < arr.length; i++) {
     result = result + Number(arr[i]);
   }
