@@ -18,4 +18,7 @@ describe("add", () => {
       "Negative numbers are not allowed: -2, -4"
     );
   });
+  it("should handle custom delimiters", () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
 });
