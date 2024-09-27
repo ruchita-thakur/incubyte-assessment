@@ -5,9 +5,12 @@ describe("add", () => {
     expect(add("")).toBe(0);
   });
   it("should return the number itself for a single number string", () => {
-    expect(add("5")).toBe(5);
+    expect(add("1")).toBe(1);
   });
   it("should handle any amount of numbers", () => {
-    expect(add("5,3,4")).toBe(12);
+    expect(add("1,5")).toBe(6);
+  });
+  it("should handle new lines between numbers (instead of commas)", () => {
+    expect(add("1\n2,3")).toBe(6);
   });
 });
