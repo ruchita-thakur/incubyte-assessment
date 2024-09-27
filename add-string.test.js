@@ -5,6 +5,9 @@ describe("add", () => {
     expect(add("")).toBe(0);
   });
   it("should return the number itself for a single number string", () => {
-    expect(add("5").toBe(5));
+    expect(add("5")).toBe(5);
+  });
+  it("should handle any amount of numbers", () => {
+    expect(add("5,3,4")).toBe(12);
   });
 });
