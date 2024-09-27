@@ -13,4 +13,9 @@ describe("add", () => {
   it("should handle new lines between numbers (instead of commas)", () => {
     expect(add("1\n2,3")).toBe(6);
   });
+  it("should throw an exception if negative numbers are passed", () => {
+    expect(add("1,-2,3,-4")).toThrowError(
+      "Negative numbers are not allowed: -2,-4"
+    );
+  });
 });
